@@ -11,4 +11,3 @@ PlayerInfo =
 	Invinsible : false,
 	
 }
-

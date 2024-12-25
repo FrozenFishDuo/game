@@ -1,3 +1,3 @@
-function updateMoveSpeed(){
-myspeed = baseMoveSpeed + (ds_map_find_value(global.items,"runFaster")*0.5)
+function updateMoveSpeed(playerObject){
+playerObject.myspeed = playerObject.baseMoveSpeed + playerObject.PlayerInventory.RunFaster*0.0625
 }

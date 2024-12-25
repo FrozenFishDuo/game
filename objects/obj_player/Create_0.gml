@@ -16,6 +16,7 @@ MISSILE,
 RUNFASTER
 }
 
+initPlayerInventory()
 global.items = ds_map_create()
 baseMoveSpeed = 3
 myspeed = 3
