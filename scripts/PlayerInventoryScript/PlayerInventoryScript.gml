@@ -1,9 +1,11 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function initPlayerInventory(){
+function NewPlayerInventory(){
 PlayerInventory = 
 {
 	WeaponMain : WeaponType.None,
-	RunFaster : 0
+	
 }
+
+return PlayerInventory
 }
