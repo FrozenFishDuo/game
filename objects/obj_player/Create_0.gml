@@ -33,3 +33,4 @@ lefCol = -4
 rigCol = 4
 getTilemap()
 surface_resize(application_surface, 480, 270);//make gaem look kewl
+
