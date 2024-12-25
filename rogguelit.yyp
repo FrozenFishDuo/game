@@ -40,6 +40,7 @@
     {"id":{"name":"collide","path":"scripts/collide/collide.yy",},},
     {"id":{"name":"getTilemap","path":"scripts/getTilemap/getTilemap.yy",},},
     {"id":{"name":"playerMove","path":"scripts/playerMove/playerMove.yy",},},
+    {"id":{"name":"updateMoveSpeed","path":"scripts/updateMoveSpeed/updateMoveSpeed.yy",},},
     {"id":{"name":"spr_Among","path":"sprites/spr_Among/spr_Among.yy",},},
     {"id":{"name":"spr_til1","path":"sprites/spr_til1/spr_til1.yy",},},
     {"id":{"name":"til_til1","path":"tilesets/til_til1/til_til1.yy",},},

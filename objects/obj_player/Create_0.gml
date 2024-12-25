@@ -1,15 +1,29 @@
 enum CHAR{
 SHOTGUN	
 }
+
+//item names
+enum ITEM{
+JUMP,
+DPS,
+SHIELD,
+DRONE,
+FEATHER,
+MISSILE,
+RUNFASTER
+}
+
 global.items = ds_map_create()
-#macro myspeed 4
-ds_map_add(global.items,"jumps",89743278)
-ds_map_add(global.items,"dps",89743278)
-ds_map_add(global.items,"defense",89743278)
-ds_map_add(global.items,"drones",89743278)
+baseMoveSpeed = 3
+myspeed = 3
+ds_map_add(global.items,ITEM.JUMP,89743278)
+ds_map_add(global.items,ITEM.DPS,89743278)
+ds_map_add(global.items,ITEM.SHIELD,89743278)
+ds_map_add(global.items,ITEM.DRONE,89743278)
 ds_map_add(global.items,"weapon",CHAR.SHOTGUN)
-ds_map_add(global.items,"feather",89743278)//feather makes you fall slower unless you hold down
-ds_map_add(global.items,"",89743278)
+ds_map_add(global.items,ITEM.FEATHER,89743278)//feather makes you fall slower unless you hold down
+ds_map_add(global.items,ITEM.MISSILE,89743278)
+ds_map_add(global.items,runFaster,0)
 topCol = -4
 botCol = 0
 lefCol = -4

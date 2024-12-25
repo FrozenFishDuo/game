@@ -1,6 +1,3 @@
 draw_self()
 draw_set_color(255)
-draw_point(x,y+topCol)
-draw_point(x,y+botCol)
-draw_point(x+lefCol,y)
-draw_point(x+rigCol,y)
+draw_text(16,16,ds_map_find_value(global.items,ITEM.RUNFASTER))
