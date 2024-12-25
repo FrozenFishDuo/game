@@ -1,5 +1,8 @@
 enum CHAR{
-SHOTGUN	
+SHOTGUN,
+PISTOL,
+SWORD,
+AVA//(secret character)
 }
 
 //item names
@@ -23,7 +26,7 @@ ds_map_add(global.items,ITEM.DRONE,89743278)
 ds_map_add(global.items,"weapon",CHAR.SHOTGUN)
 ds_map_add(global.items,ITEM.FEATHER,89743278)//feather makes you fall slower unless you hold down
 ds_map_add(global.items,ITEM.MISSILE,89743278)
-ds_map_add(global.items,runFaster,0)
+ds_map_add(global.items,ITEM.RUNFASTER,0)
 topCol = -4
 botCol = 0
 lefCol = -4

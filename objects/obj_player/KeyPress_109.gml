@@ -1,4 +1,4 @@
-var g = ds_map_find_value(global.items,"runFaster")
+var g = ds_map_find_value(global.items,ITEM.RUNFASTER)
 if g > 0
-ds_map_set(global.items,"runFaster",g-1)
+ds_map_set(global.items,ITEM.RUNFASTER,g-1)
 updateMoveSpeed()

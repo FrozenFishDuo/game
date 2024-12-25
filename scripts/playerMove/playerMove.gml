@@ -1,8 +1,5 @@
 function playerMove(){
 
-floor(x)
-floor(y)
-
 keyUp = keyboard_check(vk_up)
 keyDown = keyboard_check(vk_down)
 keyLeft = keyboard_check(vk_left)
