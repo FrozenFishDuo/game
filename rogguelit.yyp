@@ -44,6 +44,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"collide","path":"scripts/collide/collide.yy",},},
     {"id":{"name":"getTilemap","path":"scripts/getTilemap/getTilemap.yy",},},
+    {"id":{"name":"itemGetSprite","path":"scripts/itemGetSprite/itemGetSprite.yy",},},
     {"id":{"name":"itemPickup","path":"scripts/itemPickup/itemPickup.yy",},},
     {"id":{"name":"PlayerEnumsScript","path":"scripts/PlayerEnumsScript/PlayerEnumsScript.yy",},},
     {"id":{"name":"PlayerInfoScript","path":"scripts/PlayerInfoScript/PlayerInfoScript.yy",},},
