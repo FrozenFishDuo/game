@@ -5,18 +5,6 @@ enum CHAR{
 	AVA//(secret character)
 }
 
-//item names
-enum ITEM{
-	NONE,
-	JUMP,
-	DPS,
-	SHIELD,
-	DRONE,
-	FEATHER,
-	MISSILE,
-	RUNFASTER
-}
-
 PlayerInfo = NewPlayerInfo()
 PlayerInventory = NewPlayerInventory()
 
