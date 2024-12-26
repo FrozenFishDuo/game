@@ -1,0 +1,1 @@
+itemPickup(item, obj_player)
