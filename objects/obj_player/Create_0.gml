@@ -26,13 +26,14 @@ topCol = -4
 botCol = 0
 lefCol = -4
 rigCol = 4
-getTilemap()
+tilemap = layer_tilemap_get_id(layer_get_id("Tiles"));
+
 surface_resize(application_surface, 480, 270);//make gaem look kewl
 
 
 global.clientPlayer = id//we don't have multiplayer yet but if we ever do this will be great to have. It's the client's player object.
 
-
+show_message(tilemap_get_width(tilemap_get_at_pixel(tilemap, 0, 0)))
 
 
 

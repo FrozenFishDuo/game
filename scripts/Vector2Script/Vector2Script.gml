@@ -4,6 +4,12 @@ function NewVector2(_X, _Y){
 		Vector2 = {
 			X : _X,
 			Y : _Y,
+			
+		IsEqual : function(OtherVector2)
+		{
+			return Vector2.X == OtherVector2.X
+			&& Vector2.Y == OtherVector2.Y;
+		},
 		
 		Add : function(OtherVector2) 
 		{

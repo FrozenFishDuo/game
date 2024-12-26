@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"getTilemap",
+  "%Name":"TileCollisionScript",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"getTilemap",
+  "name":"TileCollisionScript",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Collisions",
+    "path":"folders/Scripts/Collisions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

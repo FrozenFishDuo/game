@@ -1,12 +1,12 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function NewBoxCollider(_X, _Y, Size){
+function NewBoxCollider(X, Y, Size){
 	 BoxCollider =
 	 {
-		 vectorA : NewVector2(_X, _Y), // Top Left
-		 vectorB : NewVector2(_X + Size, _Y), // Top Right
-		 vectorC : NewVector2(_X, _Y + Size), // Bottom Left
-		 vectorD : NewVector2(_X + Size, _Y + Size), // Bottom Right
+		 vectorA : NewVector2(X, Y), // Top Left
+		 vectorB : NewVector2(X + Size, Y), // Top Right
+		 vectorC : NewVector2(X, Y + Size), // Bottom Left
+		 vectorD : NewVector2(X + Size, Y + Size), // Bottom Right
 		 
 		 IsOverlapping : function(_BoxCollider)
 		 {
@@ -19,4 +19,15 @@ function NewBoxCollider(_X, _Y, Size){
 		 }
 	 }
 	return BoxCollider
+}
+
+function GetTileBoxCollider(X, Y, tilemap)
+{
+	tileId = tilemap_get_at_pixel(tilemap, X, Y)
+	if (tileId != -1)
+	{
+		return NewBoxCollider( tilemap_get_x(tileId), tilemap_get_y(tileId), tilemap_get_tile_width(tileId))
+	}
+	
+	
 }
