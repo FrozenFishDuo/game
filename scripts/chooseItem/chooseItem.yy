@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"reuseplz",
+  "%Name":"chooseItem",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"reuseplz",
+  "name":"chooseItem",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Items",
+    "path":"folders/Scripts/Items.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

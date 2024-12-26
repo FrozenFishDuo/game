@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"highlightInteract",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Items",
+    "path":"folders/Scripts/Items.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

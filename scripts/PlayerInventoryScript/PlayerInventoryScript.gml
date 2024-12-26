@@ -4,7 +4,7 @@ function NewPlayerInventory(){
 PlayerInventory = 
 {
 	WeaponMain : WeaponType.None,
-	
+	DroneCount : 0,
 }
 
 return PlayerInventory

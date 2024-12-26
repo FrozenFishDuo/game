@@ -1,7 +1,7 @@
 /// @description Interact
 with instance_create_layer(x,y,"Instances",obj_item)
 {
-	item = ITEM.RUNFASTER
+	item = other.item
 }
 open = true
 image_angle = 0

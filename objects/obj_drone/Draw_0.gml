@@ -1,0 +1,1 @@
+draw_sprite(sprite_index,0,x+(dcos(rot)*6),y+(dsin(rot)*3))

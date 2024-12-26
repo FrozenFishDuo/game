@@ -1,4 +1,4 @@
 function playerInteract(){
-with interactID
-event_user(0)
+	with interactID
+	event_user(0)
 }
