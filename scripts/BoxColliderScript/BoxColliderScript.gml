@@ -1,13 +1,14 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function BoxCollider(X, Y, Size) constructor{
-	 
-		 vectorA = new Vector2(X, Y); // Top Left
-		 vectorB = new Vector2(X + Size, Y); // Top Right
-		 vectorC = new Vector2(X, Y + Size); // Bottom Left
-		 vectorD = new Vector2(X + Size, Y + Size); // Bottom Right
+function NewBoxCollider(X, Y, Size){
+	 BoxCollider =
+	 {
+		 vectorA : NewVector2(X, Y), // Top Left
+		 vectorB : NewVector2(X + Size, Y), // Top Right
+		 vectorC : NewVector2(X, Y + Size), // Bottom Left
+		 vectorD : NewVector2(X + Size, Y + Size), // Bottom Right
 		 
-		 static IsOverlapping = function(_BoxCollider)
+		 IsOverlapping : function(_BoxCollider)
 		 {
 			 return (
 			 vectorA.X < _BoxCollider.vectorD.X && // if This box's left side is left to the other box's right side
@@ -15,20 +16,18 @@ function BoxCollider(X, Y, Size) constructor{
 			 vectorA.Y < _BoxCollider.vectorD.Y && // if this box's top side is above the other box's bottom side 
 			 vectorD.Y > _BoxCollider.vectorA.Y // if this box's bottom side is below the other box's top side
 			 );
-		 
+		 }
 	 }
-
+	return BoxCollider
 }
 
-function GetTileBoxCollider(X, Y, tileLayer)
+function GetTileBoxCollider(X, Y, tilemap)
 {
-	
-	tileVector = new Vector2(tilemap_get_cell_x_at_pixel(tileLayer, X, Y), tilemap_get_cell_y_at_pixel(tileLayer, X, Y))
-	foundTile = tilemap_get_at_pixel(tileLayer, X, Y)
-	if (foundTile == 1)
+	tileId = tilemap_get_at_pixel(tilemap, X, Y)
+	if (tileId != -1)
 	{
-		tileVector.ScalarMultiply(tilemap_get_tile_width(tileLayer))
-		return new BoxCollider( tileVector.X, tileVector.Y, tilemap_get_tile_width(tileLayer))
+		return NewBoxCollider( tilemap_get_x(tileId), tilemap_get_y(tileId), tilemap_get_tile_width(tileId))
 	}
-	return -1
+	
+	
 }

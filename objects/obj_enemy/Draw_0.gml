@@ -1,4 +1,4 @@
-draw_sprite(sprite_index,0,x+(dcos(rot)*6),y+(dsin(rot)*3))
+draw_self()
 if myhealth != myhealthMax
 {
 	draw_set_color(c_red)

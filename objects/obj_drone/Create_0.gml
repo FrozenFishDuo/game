@@ -12,6 +12,8 @@ myhealthMax = 50
 rot = 0
 rotSpeed = 2
 
+shootCounter = irandom_range(60,90)
+
 followID = obj_player//follow player(which player can be set via instance ID) or enemy
 moveRelativeDestination()
 alarm[0] = irandom_range(60,90)

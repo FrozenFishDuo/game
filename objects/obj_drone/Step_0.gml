@@ -24,6 +24,20 @@ if enemyTest != noone
 	followID = obj_player
 }
 
+if followID != obj_player//this may break later
+{
+	if --shootCounter == 0
+	{
+		shootCounter = irandom_range(60,90)
+		with instance_create_layer(x,y,"Instances",obj_droneBullet)
+		{
+			direction = point_direction(x,y,enemyTest.x,enemyTest.y)
+			image_angle = direction
+			speed = 6
+		}
+	}
+}
+
 if direction < 90 || direction >= 270
 image_xscale = 1
 else
