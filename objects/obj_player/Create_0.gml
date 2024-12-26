@@ -35,9 +35,6 @@ surface_resize(application_surface, 960, 540);//make gaem look kewl
 
 global.clientPlayer = id//we don't have multiplayer yet but if we ever do this will be great to have. It's the client's player object.
 
-show_message(tilemap_get_width(tilemap_get_at_pixel(tilemap, 0, 0)))
-
-
 
 
 

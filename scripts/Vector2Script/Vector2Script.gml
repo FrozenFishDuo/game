@@ -1,101 +1,104 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function NewVector2(_X, _Y){
-		Vector2 = {
-			X : _X,
-			Y : _Y,
+function Vector2(_X = 0, _Y = 0) constructor{
+		
+		X = _X;
+		Y = _Y;
 			
-		IsEqual : function(OtherVector2)
+		static IsEqual = function(OtherVector2)
 		{
-			return Vector2.X == OtherVector2.X
-			&& Vector2.Y == OtherVector2.Y;
-		},
+			return X == OtherVector2.X
+			&& Y == OtherVector2.Y;
+		}
 		
-		Add : function(OtherVector2) 
+		static Add = function(OtherVector2) 
 		{
-			Vector2.X += OtherVector2.X;
-			Vector2.Y += OtherVector2.Y;
-		},
+			X += OtherVector2.X;
+			Y += OtherVector2.Y;
+			return(Vector2)
+		}
 		
-		Subtract : function(OtherVector2) 
+		static Subtract = function(OtherVector2) 
 		{
-			Vector2.X -= OtherVector2.X;
-			Vector2.Y -= OtherVector2.Y;
-		},
+			X -= OtherVector2.X;
+			Y -= OtherVector2.Y;
+			return(Vector2)
+		}
 		
-		Multiply : function(OtherVector2) 
+		static Multiply = function(OtherVector2) 
 		{
-			Vector2.X *= OtherVector2.X;
-			Vector2.Y *= OtherVector2.Y;
-		},
+			X *= OtherVector2.X;
+			Y *= OtherVector2.Y;
+			return(Vector2)
+		}
 		
-		Divide : function(OtherVector2) 
+		static Divide = function(OtherVector2) 
 		{
-			Vector2.X /= OtherVector2.X;
-			Vector2.Y /= OtherVector2.Y;
-		},
+			X /= OtherVector2.X;
+			Y /= OtherVector2.Y;
+			return(Vector2)
+		}
 		
-		ScalarMultiply : function(Scalar) 
+		static ScalarMultiply = function(Scalar) 
 		{
-			Vector2.X *= Scalar;
-			Vector2.Y *= Scalar;
-		},
+			X *= Scalar;
+			Y *= Scalar;
+			return(Vector2)
+		}
 		
-		ScalarDivide : function(Scalar) 
+		static ScalarDivide = function(Scalar) 
 		{
-			Vector2.X /= Scalar;
-			Vector2.Y /= Scalar;
-		},
+			X /= Scalar;
+			Y /= Scalar;
+			return(Vector2)
+		}
 		
 		
-		Magnitude : function()
+		static Magnitude = function()
 		{
-			return sqrt(Vector2.X * Vector2.X + Vector2.Y * Vector2.Y);
-		},
+			return sqrt(X * X + Y * Y);
+		}
 		
-		Normalize : function()
+		static Normalize = function()
 		{
-			var length = Vector2.Magnitude();
+			var length = Magnitude();
 			if (length == 0) { return NewVector2(0, 0) }
-			return Vector2.ScalarMultiply(1 / length);
-		},
+			return ScalarMultiply(1 / length);
+		}
 		
-		DotProduct : function(OtherVector2)
+		static DotProduct = function(OtherVector2)
 		{
-			return Vector2.X * OtherVector2.X + Vector2.Y * OtherVector2.Y;
-		},
+			return X * OtherVector2.X + Y * OtherVector2.Y;
+		}
 		
-		CrossProduct : function(OtherVector2)
+		static CrossProduct = function(OtherVector2)
 		{
-			return Vector2.X * OtherVector2.X - Vector2.Y * OtherVector2.Y;
-		},
+			return X * OtherVector2.X - Y * OtherVector2.Y;
+		}
 		
-		ToRadian : function()
+		static ToRadian = function()
 		{
-			return arctan2(Vector2.X, Vector2.Y);
-		},
+			return arctan2(X, Y);
+		}
 		
-		ToDegrees : function()
+		static ToDegrees = function()
 		{
-			return radtodeg(arctan2(Vector2.X, Vector2.Y));
-		},
+			return radtodeg(arctan2(X, Y));
+		}
 		
-		RadianBetween : function(OtherVector)
+		static RadianBetween = function(OtherVector)
 		{
-			var dot = Vector2.DotProduct(OtherVector);
-			var lengths = Vector2.Magnitude() * OtherVector.Magnitude();
+			var dot = DotProduct(OtherVector);
+			var lengths = Magnitude() * OtherVector.Magnitude();
 			if (lengths == 0) { return 0; }
 			return arccos(dot / lengths);
-		},
+		}
 		
-		DegreesBetween : function(OtherVector)
+		static DegreesBetween = function(OtherVector)
 		{
-			var dot = Vector2.DotProduct(OtherVector)
-			var lengths = Vector2.Magnitude() * OtherVector.Magnitude()
+			var dot = DotProduct(OtherVector)
+			var lengths = Magnitude() * OtherVector.Magnitude()
 			if (lengths == 0) { return 0; }
 			return radtodeg(arccos(dot / lengths));
 		}
-		
-	}
-	return Vector2
 }
