@@ -58,6 +58,7 @@
     {"id":{"name":"PlayerInventoryScript","path":"scripts/PlayerInventoryScript/PlayerInventoryScript.yy",},},
     {"id":{"name":"playerMove","path":"scripts/playerMove/playerMove.yy",},},
     {"id":{"name":"reuseplz","path":"scripts/reuseplz/reuseplz.yy",},},
+    {"id":{"name":"Script15","path":"scripts/Script15/Script15.yy",},},
     {"id":{"name":"updateMoveSpeed","path":"scripts/updateMoveSpeed/updateMoveSpeed.yy",},},
     {"id":{"name":"Vector2Script","path":"scripts/Vector2Script/Vector2Script.yy",},},
     {"id":{"name":"spr_Among","path":"sprites/spr_Among/spr_Among.yy",},},
