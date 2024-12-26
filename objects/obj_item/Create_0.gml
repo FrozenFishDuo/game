@@ -1,3 +1,16 @@
+//item names
+enum ITEM{
+	NONE,
+	JUMP,
+	DPS,
+	SHIELD,
+	DRONE,
+	FEATHER,
+	MISSILE,
+	RUNFASTER
+}
+
+
 canPickUp = false
 gravity = 0.0625
 hspeed = random_range(-2,2)/2

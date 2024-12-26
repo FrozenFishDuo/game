@@ -1,0 +1,2 @@
+if myhealth < myhealthMax
+myhealth ++
