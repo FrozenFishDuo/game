@@ -4,6 +4,7 @@ function NewPlayerInfo()
 {
 	PlayerInfo =
 {
+	BaseSpeed : 3,
 	SpeedMod : 0,
 	Armor : 0,
 	Damage : 0,

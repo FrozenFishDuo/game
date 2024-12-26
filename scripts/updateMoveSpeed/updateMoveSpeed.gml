@@ -1,3 +1,3 @@
 function updateMoveSpeed(playerObject){
-playerObject.myspeed = playerObject.baseMoveSpeed + playerObject.PlayerInfo.SpeedMod*0.0625
+playerObject.PlayerInfo.SpeedMod += 0.01
 }
