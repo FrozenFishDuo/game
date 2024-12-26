@@ -31,3 +31,29 @@ surface_resize(application_surface, 480, 270);//make gaem look kewl
 
 
 global.clientPlayer = id//we don't have multiplayer yet but if we ever do this will be great to have. It's the client's player object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

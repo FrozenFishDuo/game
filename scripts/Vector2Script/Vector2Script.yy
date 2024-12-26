@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"BoxCollider",
+  "%Name":"Vector2Script",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"BoxCollider",
+  "name":"Vector2Script",
   "parent":{
-    "name":"Collisions",
-    "path":"folders/Scripts/Collisions.yy",
+    "name":"Vectors",
+    "path":"folders/Scripts/Vectors.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
