@@ -1,2 +1,1 @@
-myhealthMax = 100
-myhealth = 100
+enemyInfo = new EnemyInfo()

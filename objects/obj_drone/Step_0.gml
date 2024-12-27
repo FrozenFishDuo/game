@@ -28,13 +28,22 @@ if followID != obj_player//this may break later
 {
 	if --shootCounter == 0
 	{
-		shootCounter = irandom_range(60,90)
-		with instance_create_layer(x,y,"Instances",obj_droneBullet)
+		shootCounter = 90
+		with instance_create_layer(x,y,"Instances",obj_projectile)
 		{
 			direction = point_direction(x,y,enemyTest.x,enemyTest.y)
 			image_angle = direction
-			speed = 6
+			speed = 5
 		}
+	}
+}
+
+if myhealth < myhealthMax//don't do regen timer if at full health, it'll stay at max when not needed
+{
+	if --regenTimer <= 0
+	{
+		regenTimer = regenTimerResetTo
+		myhealth ++
 	}
 }
 

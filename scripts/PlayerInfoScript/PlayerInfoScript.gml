@@ -17,7 +17,3 @@ function NewPlayerInfo()
 
 return PlayerInfo
 }
-
-
-
-
