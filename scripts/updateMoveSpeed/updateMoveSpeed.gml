@@ -1,3 +1,3 @@
 function updateMoveSpeed(playerObject){
-playerObject.PlayerInfo.SpeedMod += 0.01
+playerObject.playerInfo.SpeedMod += 0.01
 }

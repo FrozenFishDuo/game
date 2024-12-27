@@ -1,71 +1,36 @@
-function playerMove(){
-
-keyUp = keyboard_check(vk_up)
-keyDown = keyboard_check(vk_down)
-keyLeft = keyboard_check(vk_left)
-keyRight = keyboard_check(vk_right)
-
-if keyUp
-{
-	if !collide(lefCol,-(PlayerInfo.BaseSpeed + PlayerInfo.SpeedMod)*2) && !collide(rigCol-1,-(PlayerInfo.BaseSpeed + PlayerInfo.SpeedMod)*2)
-	y -= PlayerInfo.BaseSpeed + PlayerInfo.SpeedMod
-	else
+function playerMove(player){
+	var vector2 = new Vector2();
+	
+	if (keyboard_check(vk_up))
 	{
-		for(i=0; i < PlayerInfo.BaseSpeed + PlayerInfo.SpeedMod; i++)
-		{
-			if !collide(lefCol,topCol-1) && !collide(rigCol-1,topCol-1)
-			y --
-			else
-			exit
-		}
+		vector2.Y = -1;
 	}
-}
 
-if keyDown
-{
-	if !collide(lefCol,PlayerInfo.BaseSpeed + PlayerInfo.SpeedMod) && collide(rigCol,PlayerInfo.BaseSpeed + PlayerInfo.SpeedMod)
-	y += PlayerInfo.BaseSpeed + PlayerInfo.SpeedMod
-	else
+	if (keyboard_check(vk_down))
 	{
-		for(i=0; i < PlayerInfo.BaseSpeed + PlayerInfo.SpeedMod; i++)
-		{
-			if !collide(lefCol,botCol+1) && !collide(rigCol,botCol+1)
-			y ++
-			else
-			exit
-		}
+		vector2.Y = 1;
 	}
-}
 
-if keyLeft
-{
-	if !collide(-(PlayerInfo.BaseSpeed + PlayerInfo.SpeedMod)*2,topCol) && !collide(-(PlayerInfo.BaseSpeed + PlayerInfo.SpeedMod)*2,botCol)
-	x -= PlayerInfo.BaseSpeed + PlayerInfo.SpeedMod
-	else
+	if (keyboard_check(vk_left))
 	{
-		for(i=0; i < PlayerInfo.BaseSpeed + PlayerInfo.SpeedMod; i++)
-		{
-			if !collide(lefCol-1,topCol) && !collide(lefCol-1,botCol)
-			x --
-			else
-			exit
-		}
+		vector2.X = -1;
 	}
-}
 
-if keyRight
-{
-	if !collide(PlayerInfo.BaseSpeed + PlayerInfo.SpeedMod,topCol) && !collide(PlayerInfo.BaseSpeed + PlayerInfo.SpeedMod,botCol)
-	x += PlayerInfo.BaseSpeed + PlayerInfo.SpeedMod
-	else
+	if (keyboard_check(vk_right))
 	{
-		for(i=0; i < PlayerInfo.BaseSpeed + PlayerInfo.SpeedMod; i++)
-		{
-			if !collide(rigCol+1,topCol) && !collide(rigCol+1,botCol)
-			x ++
-			else
-			exit
-		}
+		vector2.X = 1;
 	}
-}
+	
+	vector2.Normalize();
+	
+	vector2.ScalarMultiply(player.playerInfo.SpeedMod);
+	
+	vector2.Add(new Vector2(player.x, player.y));
+	
+	boxCollider = new BoxCollider(vector2.X, vector2.Y, 32)
+	if (!IsTileCollision(boxCollider, player.tilemap))
+	{
+		player.x = vector2.X;
+		player.y = vector2.Y;
+	}
 }
