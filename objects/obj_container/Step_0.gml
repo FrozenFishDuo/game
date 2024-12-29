@@ -9,7 +9,10 @@ if !open
 	}
 	else if dist >= 32
 	sineMulti = 1
-	image_angle = ((dsin(sineWave))*6)*(abs(sineMulti-1))
-	image_xscale = 1+((abs(sineMulti-1)/6))
-	image_yscale = image_xscale
+	if !global.paused
+	{
+		image_angle = ((dsin(sineWave))*6)*(abs(sineMulti-1))
+		image_xscale = 1+((abs(sineMulti-1)/6))
+		image_yscale = image_xscale
+	}
 }

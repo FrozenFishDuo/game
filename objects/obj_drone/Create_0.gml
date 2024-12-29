@@ -1,6 +1,6 @@
 function moveRelativeDestination(){
 	followDestAngle = random(360)//be around the player in a different spot; this is an angle
-	followDestDist = random_range(65,90)//distance to hover around the player. this is a multiplier, not absolute distance
+	followDestDist = random_range(120,190)//distance to hover around the player. this is a multiplier, not absolute distance
 }
 
 myhealth = 24
@@ -16,4 +16,4 @@ shootCounter = irandom_range(60,90)
 
 followID = obj_player//follow player(which player can be set via instance ID) or enemy
 moveRelativeDestination()
-alarm[0] = 90
+alarm0 = 90

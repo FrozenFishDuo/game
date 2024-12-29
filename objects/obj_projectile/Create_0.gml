@@ -1,1 +1,2 @@
-alarm[0] = 900
+alarm0 = 900
+damage = 1

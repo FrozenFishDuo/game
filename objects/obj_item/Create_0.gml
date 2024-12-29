@@ -10,6 +10,7 @@ enum ITEM{
 	RUNFASTER
 }
 
+//animation needs to be redone in a manner that works with pausing the game
 
 canPickUp = false
 gravity = 0.0625

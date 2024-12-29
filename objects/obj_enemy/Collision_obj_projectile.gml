@@ -1,4 +1,4 @@
 instance_destroy(other)
-enemyInfo.Health -= 1
+enemyInfo.Health -= other.damage
 if enemyInfo.Health <= 0
 instance_destroy()
