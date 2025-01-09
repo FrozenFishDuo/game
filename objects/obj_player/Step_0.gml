@@ -35,7 +35,13 @@ if keyboard_check_pressed(vk_escape)
 }
 
 //end game
-if keyboard_check_pressed(vk_escape) && keyboard_check(vk_control)
+if keyboard_check_pressed(vk_escape) && keyboard_check(vk_shift)
 game_end()
 
 highlightInteract(id)//use this to highlight which entity to work with
+
+if x < xprevious
+image_xscale = -1
+
+if x > xprevious
+image_xscale = 1
