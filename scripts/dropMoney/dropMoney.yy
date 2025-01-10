@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"dropMoney",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"dropMoney",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

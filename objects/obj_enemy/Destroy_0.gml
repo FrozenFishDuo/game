@@ -1,0 +1,1 @@
+dropMoney(irandom(5)+1)

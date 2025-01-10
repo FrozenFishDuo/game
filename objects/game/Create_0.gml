@@ -1,0 +1,1 @@
+baseMoney = 1//increase this slightly every game level?

@@ -24,6 +24,9 @@ if !global.paused
 		}
 	}
 	#endregion
+	
+	if mouse_check_button(mb_left) && keyboard_check(vk_control)
+	instance_create_layer(mouse_x,mouse_y,"Instances",obj_drone)
 }
 //pause menu
 if keyboard_check_pressed(vk_escape)

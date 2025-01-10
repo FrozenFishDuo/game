@@ -12,6 +12,7 @@ function NewPlayerInfo()
 	CriticalHitChance : 0,
 	CriticalHitMod : 0,
 	Invinsible : false,
+	Money : 0,
 	
 }
 

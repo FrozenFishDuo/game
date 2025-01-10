@@ -33,7 +33,7 @@
   "origin":9,
   "parent":{
     "name":"Items",
-    "path":"folders/Sprites/Items.yy",
+    "path":"folders/Sprites/Drops/Items.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
